@@ -142,5 +142,23 @@ Hotel.getByPrice = (order, result) => {
  
 };
 
+Hotel.getHotelById = (id, result) => {
+  sql.query(
+    "SELECT hotel.id_hotel, name_hotel, price_hotel, category, images.image, cr.raiting  FROM db_hotels.hotel as hotel \
+    INNER JOIN image_hotel as images ON hotel.id_hotel = images.id_hotel INNER JOIN customer_ratings cr \
+    ON hotel.id_hotel = cr.id_hotel where hotel.id_hotel = ?;",[id],
+    (err, res) => {
+      if (err) {
+        console.log("error: ", err);
+        result(null, err);
+        return;
+      }
+
+      
+      result(null, res);
+    }
+  );
+}
+
 
 module.exports = Hotel;

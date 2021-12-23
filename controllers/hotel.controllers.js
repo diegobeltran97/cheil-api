@@ -145,6 +145,20 @@ exports.addHotel = (req, res) => {
 };
 
 
+exports.getById = (req, res) => {
+  Hotel.getHotelById(req.params.id, (err, data) => {
+    if (err)
+      res.status(500).send({
+        message:
+          err.message || "Some error occurred while retrieving hotels."
+      });
+    else res.send(data);
+  });
+};
+
+
+
+
 
 
 
