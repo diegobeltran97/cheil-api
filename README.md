@@ -25,5 +25,9 @@ http://localhost:3001/api/category/1
 Get by Rating
 http://localhost:3000/api/raiting/3
 
+para la apliacion del cliente:
+
+https://github.com/diegobeltran97/cheil-client
+
 
 
