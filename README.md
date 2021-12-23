@@ -2,6 +2,10 @@
 Api chei prueba
 
 
+Para iniciar el protecto
+ -npm run start
+
+
 ///// Api funciona en puerto 3001
 
 ----Peticiones
