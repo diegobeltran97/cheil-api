@@ -32,6 +32,8 @@ exports.getAll = (req, res) => {
       });
     else {
       const result = [];
+
+      console.log('data', data);
       
        data.forEach(element => {
          result.push({
